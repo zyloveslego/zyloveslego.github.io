@@ -1,7 +1,20 @@
+---
+title: Home
+---
+
 <html>
-<body>
-<a class="post-link" href="/jekyll/update/2019/01/30/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-</a>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <h1>{{ "Hello World!" | downcase }}</h1>
+  <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+  </body>
 </html>
