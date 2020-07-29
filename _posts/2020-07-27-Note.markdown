@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Note"
+date:   2020-07-27
+categories: 随手记
+---
+
+随手尝试了下pagerank，图为3个节点，（1-2，3）
+
+
+# pagerank test
+
+import numpy as np
+x = np.matrix([[0, 1, 1/3], [1, 0, 1/3], [0, 0, 1/3]])
+y = np.matrix([[1/3, 1/3, 1/3], [1/3, 1/3, 1/3], [1/3, 1/3, 1/3]])
+
+M = 0.85*x + 0.15*y
+
+pagerank = np.matrix([[1/3], [1/3], [1/3]])
+temp = np.matrix([[0], [0], [0]])
+while(True):
+    pagerank = np.dot(M, pagerank)
+    if temp.all() == pagerank.all():
+        break
+    temp = pagerank
+
+
+print(pagerank)
