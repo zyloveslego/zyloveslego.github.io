@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "2020-08-06"
+date:   2020-08-06
+categories: 随手记
+---
+
+BOW: 句子的维度是单词的个数
+    简单快捷；不能体现语序
+
+<br>
+Q:[0]和[0, :]的区别
+
+A:
+
+<br>
+Q:Adam算法
+
+A: [论文链接](https://arxiv.org/abs/1412.6980)
+
+<br>
+Q:fit, transform和fit_transform用法; 再看看例子
+
+A:fit_transform: Learn the vocabulary dictionary and return term-document matrix.
+  transform: Transform documents to document-term matrix.
+  fit: Learn vocabulary and idf from training set.
+
+<br>
+Q:BCEWithLogitsLoss
+
+A:BCELoss + sigmoid, BCELoss = -1/n * Σ(Y x lnX + (1-Y) x ln(1-X)). 是Binary CrossEntropy.
+
+<br>
+Q:tqdm_notebook是什么
+
+A:进度条美化
+```python
+from tqdm import tqdm_notebook
+import time
+
+for i in tqdm_notebook(range(100),desc='demo：'):
+    time.sleep(0.01)
+```
+
+<br>
+Q:nn.utils.clip_grad_norm_(parameters, max_norm, norm_type)
+
+A:既然在BP过程中会产生梯度消失/爆炸（就是偏导无限接近0, 导致长时记忆无法更新）, 那么最简单粗暴的方法, 设定阈值, 
+  当梯度小于/大于阈值时, 更新的梯度为阈值.
+  
+  有个公式，查查。
+
+<br>
+Q:model.train() / model.eval()
+
+A:训练完train_datasets之后, model要来测试样本了. 在model(test_datasets)之前，需要加上model.eval().
+  否则的话, 有输入数据, 即使不训练, 它也会改变权值. 这是model中含有batch normalization层所带来的的性质.
+  以前没有见过？

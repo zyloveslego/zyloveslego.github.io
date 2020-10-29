@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "2020-08-05"
+date:   2020-08-05
+categories: 随手记
+---
+
+运行python程序时, -O会不执行assert语句; 设置在edit configuration中的interpreter options中.
+适配器模式: target需要A, 现在只有B, 把B封装成为A.

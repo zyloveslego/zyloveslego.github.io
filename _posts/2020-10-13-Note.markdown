@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "2020-10-13"
+date:   2020-10-13
+categories: 随手记
+---
+
+scrapy pipeline典型用途：
+1. 清理HTML数据
+2. 验证数据
+3. 查重
+4. 存入数据库
+
+Q:管道在setting里注册了就会被调用？ A:可以根据spider的name判断
+
+Fine-tuning 和 frozen: 底层参数变化/不变
+
+回归分析是研究依存关系, 一个变量变化受另一个变化影响
+相关分析是研究平行关系, 两个及以上变量间相互影响
+但是也有多元回归分析
+
+Pearson是"样本"线性相关系数
+
+不想建立回归关系, 不在乎自变量因变量, 可以用相关性
+具有相关性才有回归的价值
+
+self attention可以找出句子内部里的关系.
+multihead attention可以理解为多个layer.

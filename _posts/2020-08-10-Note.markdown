@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "2020-08-10"
+date:   2020-08-10
+categories: 随手记
+---
+
+```python
+embedding_layer = nn.Embedding(num_embeddings=len(word2idx), embedding_dim=3)
+embeddings = embedding_layer(idxs)
+embeddings, embeddings.shape
+```
+Q: len(word2idx) = 8, 输出的shape为9*3?
+
+Q: ['[CLS]'] + tokens + ['[SEP]'] 前后的tag是什么?

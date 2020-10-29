@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "2020-07-28"
+date:   2020-07-28
+categories: 随手记
+---
+
+embeddingBag就是更容易使用的embedding，输入也是词袋模型，据说对**FastText**很友好，可以试试。
+词袋模型ngram都是将词或多个词转为一个index。
+
+[调整学习率的方法](https://zhuanlan.zhihu.com/p/69411064)

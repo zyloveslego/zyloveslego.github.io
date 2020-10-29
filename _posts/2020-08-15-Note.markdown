@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "2020-08-15"
+date:   2020-08-15
+categories: 随手记
+---
+
+Q: Fine-tune是在自己的数据集上吗
+
+Q: 为什么修饰器一定要在函数里写个wrapper，把函数本身当做wrapper不行吗
+
+修饰器可用于log、用户认证（Django的就是）、格式化输出等
+
+similarity和dissimilarity是不一样的

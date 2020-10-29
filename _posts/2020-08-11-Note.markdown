@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "2020-08-11"
+date:   2020-08-11
+categories: 随手记
+---
+
+Q: Dataset类, DataLoader(..., collate_fn)类
+
+
+Q: GRU和LSTM区别， batch_first是啥
+
+
+Q: 为什么用的是GRU的output[:, :, -1]; 为什么seq_len和batch是反的
+
+
+Q: model.eval()和torch.no_grad()是不是重复了

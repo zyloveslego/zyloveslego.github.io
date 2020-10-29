@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "2020-08-13"
+date:   2020-08-13
+categories: 随手记
+---
+
+
+Linear Threshold Model
+一个点受周围的点影响，超过threshold则改变状态。
+
+Independent Cascade Model
+每个点有一定的概率影响周围的点。找最多被影响的人。NPC问题。 Greed hill-climbing
+
+Outbreak detection
+检测sensor放在哪个点可以最高的隔断整个系统。
+给定一个网络传播的动态过程，我们希望选择一个节点集合来高效的检测过程。
+
+Network Evolution
+网络如何变化的；加入了时间的信息。
+宏观从diameter来看，围观从加入时间维度来看。

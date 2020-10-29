@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "2020-07-29"
+date:   2020-07-29
+categories: 随手记
+---
+
+# 单例模式总结
+python的__new__才是真正的创建新对象的方法，__init__可以理解为初始化
+[单例模式例子](https://mozillazg.com/2016/09/python-singleton-pattern.html)
+
+
+
+```python
+class Singleton(object):
+    _instance = None
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = object.__new__(cls)
+
+        return cls._instance
+
+s1 = Singleton()
+s2 = Singleton()
+print(s1)
+print(s2)
+```
+
+
+# 工厂模式总结
+工厂模式是说调用方可以通过调用一个简单函数就可以创建 不同的对象。工厂模式一般包含工厂方法和抽象工厂两种模式。
+工厂方法模式是指定义一个可以根据输入参数的不同返回不同对象的函数。
+一系列的工厂方法组合在一起实现了一个抽象工厂。
+
+
+动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。
+
+
+# 建造者模式
+所以当有一下情况时候，需要考虑使用建造者模式:
+1.对象的创建步骤可以独立于创建过程的时候
+2.被创建的对象拥有不同的表现形式
+
+建造者由 Director 和 Builder 构成，Builder 用于抽象各个对象部件的接口，Director 用于构造一个 Builder 的接口，由 Director 去指导 Builder 如何生成一个复杂对象。
+
+总结一句话：建造者模式注重一步一步创建对象，抽象工厂模式注重一步到位创建对象。
